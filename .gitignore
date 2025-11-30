@@ -1,0 +1,32 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Editores de código
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencias
+node_modules/
+.npm
+.yarn/
+
+# Archivos de construcción
+dist/
+build/
+*.min.js
+*.min.css
+
+# Archivos temporales
+*.temp
+.cache/
+
+# Específicos del proyecto
+.env
+.env.local
+config.local.json

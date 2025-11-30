@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Exploración de estilos arquitectónicos: monolítico, capas, cliente-servidor, MVC y microservicios.">
+  <meta name="author" content="Johan Ricardo Martinez Pedroza">
+  <title>Estilos Arquitectónicos Más Utilizados | Blog Técnico</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title">Johan Ricardo Martinez Pedroza</h1>
+        <p class="site-tagline">Blog Técnico: Arquitectura de Software</p>
+      </div>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html" class="nav-link">← Volver</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <article>
+      <header>
+        <h1>Estilos Arquitectónicos Más Utilizados</h1>
+        <p class="article-meta">Una comparativa de monolíticos, capas, cliente-servidor, MVC y microservicios.</p>
+      </header>
+
+      <section>
+        <h2>Definición de estilo arquitectónico</h2>
+        <p>Un estilo arquitectónico es una categoría o conjunto de reglas y patrones que definen la organización y las interacciones entre los componentes de un sistema.</p>
+      </section>
+
+      <section>
+        <h2>Estilo Monolítico</h2>
+        <p>Un monolito concentra toda la lógica de la aplicación en un único despliegue.</p>
+        <ul>
+          <li><strong>Características:</strong> Código y datos en un mismo proceso o artefacto, despliegue único.</li>
+          <li><strong>Ventajas:</strong> Simplicidad en desarrollo y despliegue, menor sobrecarga operativa.</li>
+          <li><strong>Desventajas:</strong> Escalado limitado por componente, despliegues riesgosos, acoplamiento alto.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Arquitectura en Capas (N-Capas)</h2>
+        <p>Organiza el sistema en capas (por ejemplo: presentación, lógica de negocio, acceso a datos).</p>
+        <ul>
+          <li><strong>Características:</strong> Separación por responsabilidades, cada capa interactúa con la contigua.</li>
+          <li><strong>Ventajas:</strong> Claridad, mantenibilidad y reutilización.</li>
+          <li><strong>Desventajas:</strong> Posible sobrecarga y latencia si hay demasiadas capas rígidas.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Arquitectura Cliente-Servidor</h2>
+        <p>División entre clientes que consumen servicios y servidores que los proveen.</p>
+        <ul>
+          <li><strong>Características:</strong> Separación de responsabilidades, comunicación por red.</li>
+          <li><strong>Ventajas:</strong> Escalado independiente de clientes y servidores, flexibilidad en cliente.</li>
+          <li><strong>Desventajas:</strong> Latencia de red, necesidad de gestionar estados distribuidos.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Arquitectura MVC</h2>
+        <p>MVC separa Modelo, Vista y Controlador para gestionar datos, presentación y flujo.</p>
+        <ul>
+          <li><strong>Características:</strong> Buen soporte para interfaces y aplicaciones interactivas.</li>
+          <li><strong>Ventajas:</strong> Facilita pruebas y separación de UI y lógica.</li>
+          <li><strong>Desventajas:</strong> Puede complicarse con reglas de negocio complejas en el controlador.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Arquitectura de Microservicios</h2>
+        <p>Conjunto de servicios pequeños e independientes que se comunican mediante APIs.</p>
+        <ul>
+          <li><strong>Características:</strong> Servicios autónomos, despliegue independiente, comunicación por red.</li>
+          <li><strong>Ventajas:</strong> Escalado granular, despliegues más seguros, resiliencia.</li>
+          <li><strong>Desventajas:</strong> Mayor complejidad operativa, retos en transacciones distribuidas y monitoreo.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Comparación entre los estilos</h2>
+        <ul>
+          <li><strong>Monolito vs Microservicios:</strong> El monolito es simple; microservicios permiten escalado y despliegues independientes pero aumentan la complejidad operativa.</li>
+          <li><strong>Capas vs MVC:</strong> Capas es una visión por responsabilidades; MVC estructura la interfaz y flujo de control en aplicaciones con UI.</li>
+          <li><strong>Cliente-Servidor:</strong> Es la base de muchas arquitecturas; puede combinarse con microservicios o monolitos.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Conclusión: cuándo conviene cada estilo</h2>
+        <ul style="margin-top: 1rem;">
+          <li><strong>Monolito:</strong> Proyectos pequeños/medianos o MVPs donde la velocidad de desarrollo es prioritaria.</li>
+          <li><strong>Arquitectura en capas:</strong> Cuando se busca claridad y separación de responsabilidades en aplicaciones empresariales.</li>
+          <li><strong>Cliente-Servidor:</strong> Siempre que haya consumidores externos (web, móviles) y se requiera centralizar servicios.</li>
+          <li><strong>MVC:</strong> Aplicaciones con interfaces ricas donde la separación de UI es importante.</li>
+          <li><strong>Microservicios:</strong> Sistemas grandes con necesidad de escalar componentes de forma independiente y equipos distribuidos.</li>
+        </ul>
+      </section>
+    </article>
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-border);">
+    <p><a href="../index.html" class="nav-link">← Volver al inicio</a></p>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Johan Ricardo Martinez Pedroza. Proyecto de Blog Técnico</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

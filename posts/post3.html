@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Patrones arquitectónicos modernos: Clean Architecture, Hexagonal y CQRS.">
+  <meta name="author" content="Johan Ricardo Martinez Pedroza">
+  <title>Patrones Arquitectónicos Modernos | Blog Técnico</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title">Johan Ricardo Martinez Pedroza</h1>
+        <p class="site-tagline">Blog Técnico: Arquitectura de Software</p>
+      </div>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html" class="nav-link">← Volver</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <article>
+      <header>
+        <h1>Patrones Arquitectónicos Modernos</h1>
+        <p class="article-meta">Clean Architecture, Hexagonal y CQRS: características, ventajas y aplicaciones.</p>
+      </header>
+
+      <section>
+        <h2>Definición de patrón arquitectónico</h2>
+        <p>Un patrón arquitectónico es una solución general, reusable y probada a problemas comunes de diseño a escala de arquitectura, que describe estructuras, responsabilidades y relaciones entre partes del sistema.</p>
+      </section>
+
+      <section>
+        <h2>Patrón: Clean Architecture</h2>
+        <p>Clean Architecture propone capas concéntricas donde las dependencias apuntan hacia el centro; las reglas de negocio permanecen independientes de frameworks y detalles externos.</p>
+        <ul>
+          <li><strong>Capas:</strong> Entidades (núcleo), Casos de uso (aplicación), Interfaces/Adaptadores, Frameworks/Drivers.</li>
+          <li><strong>Propósito:</strong> Mantener independencia de frameworks, facilidad de pruebas y separación clara entre reglas del negocio y detalles de implementación.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Arquitectura Hexagonal (Puertos y Adaptadores)</h2>
+        <p>También llamada Ports & Adapters; separa el dominio de los mecanismos externos mediante puertos (interfaces) y adaptadores (implementaciones concretas).</p>
+        <ul>
+          <li><strong>Capas:</strong> Dominio en el centro, puertos que definen contratos, adaptadores externos (DB, UI, servicios) implementando puertos.</li>
+          <li><strong>Propósito:</strong> Aislar el dominio de tecnologías externas para facilitar pruebas y reemplazo de dependencias.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Patrón: CQRS (Command Query Responsibility Segregation)</h2>
+        <p>CQRS separa las operaciones de escritura (commands) de las de lectura (queries), permitiendo optimizaciones y modelos distintos para cada caso.</p>
+        <ul>
+          <li><strong>Ventajas:</strong> Escalabilidad en lecturas/escrituras, optimización independiente, claridad en responsabilidades.</li>
+          <li><strong>Desventajas:</strong> Mayor complejidad, necesidad de sincronización entre modelos y gestión de consistencia eventual.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Ventajas y desventajas de cada patrón</h2>
+        <ul>
+          <li><strong>Clean Architecture:</strong> 
+            <ul>
+              <li>Ventajas: Mantenibilidad excelente, pruebas unitarias simples, independencia de frameworks.</li>
+              <li>Desventajas: Puede implicar más capas y complejidad inicial, requiere disciplina del equipo.</li>
+            </ul>
+          </li>
+          <li><strong>Hexagonal:</strong> 
+            <ul>
+              <li>Ventajas: Aislamiento perfecto del dominio, facilidad para cambiar adaptadores sin tocar la lógica.</li>
+              <li>Desventajas: Estructura conceptual requiere experiencia, puede llevar a sobre-ingeniería en proyectos simples.</li>
+            </ul>
+          </li>
+          <li><strong>CQRS:</strong> 
+            <ul>
+              <li>Ventajas: Rendimiento y escalabilidad para cargas desbalanceadas, modelos optimizados para cada operación.</li>
+              <li>Desventajas: Complejidad en sincronización, eventualconsistency introduce desafíos, requiere monitoreo avanzado.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Ejemplos de aplicación en proyectos modernos</h2>
+        <ul>
+          <li><strong>Clean Architecture:</strong> API de pagos donde la lógica de negocio debe permanecer estable y testeable independientemente de frameworks web.</li>
+          <li><strong>Hexagonal:</strong> Sistema que integra múltiples proveedores de terceros (pagos, envíos) donde los adaptadores facilitan el reemplazo sin afectar el dominio.</li>
+          <li><strong>CQRS:</strong> Plataforma de comercio electrónico con alta carga de lecturas (catálogo) y escrituras (órdenes), utilizando modelos especializados y eventual consistency.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Conclusión comparativa</h2>
+        <p>Los tres patrones buscan modularidad y mantenibilidad:</p>
+        <ul>
+          <li><strong>Clean Architecture</strong> enfatiza la independencia del dominio mediante capas concéntricas.</li>
+          <li><strong>Hexagonal</strong> facilita la sustitución de infraestructuras y garantiza que el dominio sea el corazón inmutable.</li>
+          <li><strong>CQRS</strong> optimiza cargas de lectura/escritura diferenciadas permitiendo escalado granular.</li>
+        </ul>
+        <p style="margin-top: 1rem;">La elección depende de requisitos específicos: si la prioridad es testeabilidad y aislamiento, Clean/Hexagonal son adecuados; si el sistema tiene demandas de rendimiento diferenciadas en lecturas y escrituras, CQRS puede proporcionar ventajas significativas.</p>
+      </section>
+    </article>
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-border);">
+    <p><a href="../index.html" class="nav-link">← Volver al inicio</a></p>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Johan Ricardo Martinez Pedroza. Proyecto de Blog Técnico</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

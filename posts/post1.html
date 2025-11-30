@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Definición, objetivos y componentes básicos de la Arquitectura de Software.">
+  <meta name="author" content="Johan Ricardo Martinez Pedroza">
+  <title>¿Qué es la Arquitectura de Software? | Blog Técnico</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title">Johan Ricardo Martinez Pedroza</h1>
+        <p class="site-tagline">Blog Técnico: Arquitectura de Software</p>
+      </div>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html" class="nav-link">← Volver</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <article>
+      <header>
+        <h1>¿Qué es la Arquitectura de Software?</h1>
+        <p class="article-meta">Una guía comprensiva sobre definiciones, objetivos y componentes fundamentales.</p>
+      </header>
+
+      <section>
+        <h2>Definición de Arquitectura de Software</h2>
+        <p>La Arquitectura de Software es la estructura o conjunto de estructuras necesarias para razonar sobre un sistema de software. Estas estructuras comprenden componentes, relaciones entre ellos y propiedades externas que son importantes para satisfacer requisitos funcionales y no funcionales.</p>
+      </section>
+
+      <section>
+        <h2>Objetivo principal de la arquitectura en un sistema</h2>
+        <p>El objetivo principal es organizar el sistema para cumplir requisitos de calidad (escalabilidad, mantenibilidad, rendimiento, seguridad) y facilitar la comunicación entre interesados y la toma de decisiones técnicas durante el ciclo de vida.</p>
+      </section>
+
+      <section>
+        <h2>Componentes básicos de una arquitectura</h2>
+        <p>Los componentes básicos suelen describirse como:</p>
+        <ul>
+          <li><strong>Módulos:</strong> Unidades funcionales cohesivas que encapsulan lógica y datos.</li>
+          <li><strong>Interfaces:</strong> Contratos que especifican cómo interactúan los módulos (APIs, eventos).</li>
+          <li><strong>Conectores:</strong> Medios de comunicación entre módulos (HTTP, gRPC, colas, bus de eventos).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Importancia dentro del desarrollo de software</h2>
+        <p>La arquitectura define decisiones de alto nivel que afectan el éxito del proyecto: permite gestionar la complejidad, soportar cambios, garantizar calidad y orientar el trabajo del equipo.</p>
+      </section>
+
+      <section>
+        <h2>Escalabilidad</h2>
+        <p>La arquitectura determina si el sistema puede crecer en carga u usuarios sin degradar el servicio. Por ejemplo, una arquitectura que facilita el escalado horizontal (microservicios, balanceadores) mejora la capacidad de escalado.</p>
+      </section>
+
+      <section>
+        <h2>Mantenibilidad</h2>
+        <p>Incluye la capacidad de modificar el sistema con esfuerzo razonable. Una arquitectura modular y con buenas interfaces reduce el acoplamiento y facilita la evolución.</p>
+      </section>
+
+      <section>
+        <h2>Rendimiento</h2>
+        <p>Las decisiones arquitectónicas (cachés, tipos de conectores, procesamiento asíncrono) influyen directamente en la latencia y el rendimiento requerido por los usuarios.</p>
+      </section>
+
+      <section>
+        <h2>Roles y responsabilidades de un Arquitecto de Software</h2>
+        <ul>
+          <li>Definir y documentar la arquitectura del sistema.</li>
+          <li>Tomar decisiones técnicas de alto nivel y evaluar sus impactos.</li>
+          <li>Guiar al equipo en patrones, estándares y buenas prácticas.</li>
+          <li>Coordinar con stakeholders para alinear requisitos y soluciones.</li>
+          <li>Evaluar riesgos técnicos y proponer mitigaciones.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Ejemplos básicos de arquitecturas en proyectos reales</h2>
+        <ul>
+          <li>Aplicación web monolítica de e-commerce donde toda la lógica reside en un único despliegue.</li>
+          <li>Sistema de mensajería con microservicios que procesan mensajes en productores/consumidores y usan una cola.</li>
+          <li>Aplicación de banca con arquitectura en capas (presentación, negocio, datos) para separar responsabilidades.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Conclusión</h2>
+        <p>La arquitectura de software es esencial para construir sistemas robustos y sostenibles. Decidir una arquitectura adecuada requiere balancear requisitos funcionales y no funcionales y anticipar la evolución del sistema.</p>
+      </section>
+    </article>
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-border);">
+    <p><a href="../index.html" class="nav-link">← Volver al inicio</a></p>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 Johan Ricardo Martinez Pedroza. Proyecto de Blog Técnico</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
